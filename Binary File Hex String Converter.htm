@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html style="height: 100%"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+        <meta name="keywords" content="Binary File Hex String Converter,file to hex,hex to file">
+        <meta name="description" content="Online file and hex string conversion tool, which supports converting binary files to hexadecimal strings and hexadecimal strings to binary files.">
+    
+    <title>Binary File Hex String Converter</title>
+    
+    <script type="text/javascript" src="./Binary File Hex String Converter_files/common_util-2db0b200582c29568d6754500ed0730b.js.download" charset="UTF-8"></script>
+
+
+<body class="layui-layout-body" style="height:100%; overflow: auto;" data-extension-installed="2.4.6" data-new-gr-c-s-check-loaded="14.1092.0" data-gr-ext-installed="">
+<div class="layui-layout layui-layout-admin" style="height:100%">
+
+    <div>
+    <style type="text/css">
+        #selectLangAnchor > span {
+            display: none;
+        }
+
+        #mobile_menu_anchor > span {
+            display: none;
+        }
+
+        #userCenterAnchor > span {
+            display: none;
+        }
+
+        .normal_site_title_menu_zh {
+            display: none;
+        }
+
+        .normal_site_title_menu_en {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .normal_site_title_menu_zh {
+                display: unset;
+                position: absolute;
+                top: 16px;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 20px;
+                left: calc(50vw - 75px);
+                cursor: pointer;
+            }
+
+            .normal_site_title_menu_en {
+                display: unset;
+                position: absolute;
+                top: 18px;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 20px;
+                left: calc(50vw - 70px);
+                cursor: pointer;
+            }
+        }
+
+    </style>
+
+    <input type="hidden" value="false" id="commonLogin">
+
+    <div class="main_content" style="min-height: calc(100% - 130px)">
+
+        <style type="text/css">
+            #transformResult {
+                white-space: pre-wrap;
+                word-break: break-all;
+                word-wrap: break-word;
+                max-height: 1000px;
+                overflow-y: auto;
+            }
+
+            .adjust_width {
+                width: 150px !important;
+            }
+
+            @media screen and (max-width: 450px) {
+                .adjust_margin {
+                    margin-left: 152px !important;
+                }
+            }
+
+        </style>
+
+        <div>
+
+            <div>
+    <style type="text/css">
+
+        .tag_container {
+            line-height: 24px;
+        }
+
+        .tag_anchor {
+            color: #01AAED;
+            margin-right: 15px;
+        }
+
+        .tag_container a:nth-child(2) {
+            margin-left: 15px;
+        }
+    </style>
+
+    <div style="display: flex;justify-content: space-between;margin-top: 15px;">
+
+
+    <div>
+        <h1 class="main_title">Binary File Hex String Converter</h1>
+    </div>
+
+ 
+
+    <div style="margin-top: 16px;margin-bottom: 20px;">
+        <hr>
+    </div>
+    <div style="margin-bottom: 20px;overflow-x: hidden;text-align: left;">
+        <script async="" src="./Binary File Hex String Converter_files/f.txt" crossorigin="anonymous"></script>
+
+    </div>
+
+</div>
+            <!--            <h1 class="main_title">-->
+            <!--                <span th:text="${currentToolItemInfo.toolName}"></span>-->
+            <!--                <span th:include="base/toolbase::tool_share"></span>-->
+            <!--            </h1>-->
+
+            <div class="layui-form layui-form-pane">
+                <div>
+                    <div class="layui-tab layui-tab-card" lay-filter="fileHexTab">
+                        <ul class="layui-tab-title">
+                            <li class="">File To Hex</li>
+                            <li class="layui-this">Hex To File</li>
+                        </ul>
+                        <div class="layui-tab-content" style="padding-top: 30px;">
+                            <div class="layui-tab-item">
+
+                                <div class="layui-form-item layui-form-text">
+                                    <div class="layui-upload-drag" id="fileContainer2" style="display: block;height: 150px">
+                                        <div style="height: 40px"></div>
+                                        <i class="layui-icon"></i>
+                                        <p>click to select or drag the file here</p>
+                                    </div><input class="layui-upload-file ui-autocomplete-input" type="file" accept="" name="file" autocomplete="off">
+                                </div>
+
+                            </div>
+                            <div class="layui-tab-item layui-show">
+
+                                <div class="layui-form-item layui-form-text">
+                                    <div class="layui-input-block">
+                                    <textarea name="inputHex" id="inputHex" class="layui-textarea" placeholder="input hex string" style="min-height: 200px" autofocus="autofocus" lay-verify="required" lay-reqtext="required field can not be empty"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+
+                    <div class="layui-inline">
+                        <button class="layui-btn" lay-submit="" lay-filter="startGenerate" id="startGenerate">Converte</button>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button class="layui-btn  layui-btn-primary layui-btn-disabled" id="startCopy" data-clipboard-target="#transformResult">Copy</button>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button class="layui-btn  layui-btn-primary layui-btn-disabled" id="startDownload">Download</button>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button class="layui-btn layui-btn-primary" id="startClear">Clear</button>
+                    </div>
+
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">Result</label>
+                    <div class="layui-input-block">
+                        <div id="transformResult" class="layui-textarea" style="min-height: 250px"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div style="margin-bottom: 30px;">
+    <div>
+
+
+</div>
+
+    </div>
+
+    <div>
+    <style type="text/css">
+        @media screen and (max-width: 768px) {
+            .footer_block_area {
+                display: block;
+            }
+
+            .lang_common_footer_margin_adjust {
+                margin-left: unset !important;
+                margin-top: 15px;
+            }
+
+            .adjust_footer_height {
+                height: 210px !important;
+            }
+        }
+    </style>
+    <div class="layui-header adjust_footer_height">
+
+
+
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+
+            </li>
+        <span class="layui-nav-bar"></span></ul>
+    </div>
+</div>
+</div>
+
+
+    <script type="text/javascript" src="./Binary File Hex String Converter_files/layui.all.js.download" charset="UTF-8"></script>
+
+<script type="text/javascript" src="./Binary File Hex String Converter_files/clipboard.min.js.download" charset="UTF-8"></script>
+<script type="text/javascript" src="./Binary File Hex String Converter_files/string_util-386d3b48b50cc53c1c54b982e3e46d2e.js.download" charset="UTF-8"></script>
+<script type="text/javascript" src="./Binary File Hex String Converter_files/uint8_util-6c489ffb133e4db7ebb6c3125e9dac4f.js.download" charset="UTF-8"></script>
+<script type="text/javascript" src="./Binary File Hex String Converter_files/filehex-ea5796e5cf184cff428d98509ceadd56.js.download" charset="UTF-8"></script>
+<script type="text/javascript" src="./Binary File Hex String Converter_files/download.min.js.download" charset="UTF-8"></script>
+<script type="text/javascript">
+    registerFileHexEvent();
+</script>
+</html>
